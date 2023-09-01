@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, IconButton, InputBase, styled } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import CastleIcon from '@mui/icons-material/Castle';
+import HomeIcon from '@mui/icons-material/Home';
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
 	backgroundColor: theme.palette.common.white,
 }));
@@ -58,7 +58,7 @@ function CustomNavbar() {
 				</Search>
 				<div style={{ flexGrow: 1 }} /> {/* Spacer */}
 				<IconButton color='black'>
-					<CastleIcon />
+					<HomeIcon />
 				</IconButton>
 			</Toolbar>
 		</StyledAppBar>
