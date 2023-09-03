@@ -1,12 +1,29 @@
 /* style.scss */
 .carousel-container {
-	min-width: 512px; /* Set the minimum width for responsiveness */
+	min-width: 512px; /* Minimum width for responsiveness */
 }
 
 .carousel-card {
-	height: 100%; /* Ensure all cards have the same height */
+	padding: 10px; /* Add space between cards */
 }
 
 .carousel-card-content {
-	height: 100%; /* Ensure card content takes up full card height */
+	height: auto; /* Allow card content to expand with text */
+}
+
+@media (max-width: 768px) {
+	.carousel-container {
+		min-width: 100%; /* Full width on smaller screens */
+	}
+
+	.carousel-card {
+		padding: 5px; /* Reduce space between cards on smaller screens */
+	}
+}
+.overview-text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* Limit to two lines */
+	-webkit-box-orient: vertical;
 }

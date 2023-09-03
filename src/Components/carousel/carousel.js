@@ -21,27 +21,30 @@ const CardCarousel = ({ data }) => {
 
 	return (
 		<div className='carousel-container'>
-			{/* Apply the CSS class to the container */}
 			<Slider {...settings}>
 				{data?.url?.results?.map((item, index) => {
 					const posterUrl =
 						`https://image.tmdb.org/t/p/original/` + item.poster_path;
 					return (
 						<div key={index} className='carousel-card'>
-							{/* Apply the CSS class to each card */}
-							<Card sx={{ maxWidth: 250, marginTop: '10px' }}>
+							<Card sx={{ maxWidth: 250 }}>
 								<CardMedia
 									component='img'
-									height='194'
+									height='194' // Adjust the height as needed
 									src={`${posterUrl}`}
-									alt={item.title}
-									style={{ objectFit: 'cover' }} // Add object-fit property
+									alt={item.title.substring(0, 25)}
+									style={{ objectFit: 'cover', height: '100%' }}
 								/>
 								<CardContent className='carousel-card-content'>
-									{/* Apply the CSS class to card content */}
-									<p>{item.title}</p>
-									<Typography variant='body2' color='text.secondary'>
-										{item.overview.substring(0, 40)}
+									<Typography variant='h6' noWrap>
+										{item.title}
+									</Typography>
+									<Typography
+										variant='body2'
+										color='text.secondary'
+										className='overview-text' // Apply a class for the overview text
+									>
+										{item.overview}
 									</Typography>
 								</CardContent>
 							</Card>
