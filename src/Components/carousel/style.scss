@@ -1,0 +1,12 @@
+/* style.scss */
+.carousel-container {
+	min-width: 512px; /* Set the minimum width for responsiveness */
+}
+
+.carousel-card {
+	height: 100%; /* Ensure all cards have the same height */
+}
+
+.carousel-card-content {
+	height: 100%; /* Ensure card content takes up full card height */
+}

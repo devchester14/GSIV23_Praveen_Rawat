@@ -5,6 +5,9 @@ function home() {
 	return (
 		<div>
 			<Upcoming />
+			<Upcoming />
+			<Upcoming />
+			<Upcoming />
 		</div>
 	);
 }
