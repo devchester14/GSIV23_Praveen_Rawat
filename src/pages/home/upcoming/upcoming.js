@@ -8,14 +8,13 @@ import Carousel from '../../../Components/carousel/carousel';
 function Upcoming() {
 	const dispatch = useDispatch();
 	const url = useSelector((state) => state.home);
-	console.log(url, 'URL');
 
 	useEffect(() => {
 		apiData();
 	}, []);
 
 	const apiData = () => {
-		fetchDataFromApi(`/movie/upcoming`).then((res) => {
+		fetchDataFromApi(`/movie/upcoming?language=en-US&page=3`).then((res) => {
 			console.log(res);
 			dispatch(getApiConfiguration(res));
 		});
